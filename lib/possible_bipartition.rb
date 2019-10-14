@@ -1,5 +1,5 @@
 # I had some help with this from https://www.geeksforgeeks.org/bipartite-graph/,
-# but I did figure out what to do with an empty array by myself :)
+# but I did figure out some edge cases by myself :)
 
 def possible_bipartition(dislikes)
   if dislikes == []
