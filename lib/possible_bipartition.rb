@@ -3,7 +3,7 @@ def possible_bipartition(dislikes)
   return true if dislikes.empty? || dislikes.length < 2
 
   # group_hash includes visited & queued nodes, key is the node & value is the group
-  # group can be 1 or 1
+  # group can be 1 or 2
   group_hash = {}
   q = []
 
