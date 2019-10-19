@@ -7,7 +7,7 @@ def possible_bipartition(dislikes)
   group_hash = {}
   q = []
 
-  # add first, existant node to q & group_hash
+  # add first, connected node to q & group_hash
   count = 0
   i = 0
   until count == 1 && i < dislikes.length
