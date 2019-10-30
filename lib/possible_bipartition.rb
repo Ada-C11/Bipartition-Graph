@@ -27,6 +27,7 @@ def possible_bipartition(dislikes)
       if queue.empty? && node < graph.keys.max
         queue.push(node + 1)
       end
+      binding.pry
     end  
     return true
 end

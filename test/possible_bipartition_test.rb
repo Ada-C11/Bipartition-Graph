@@ -1,6 +1,6 @@
 require_relative "test_helper"
 
-xdescribe "possible_bipartition" do
+describe "possible_bipartition" do
   it "will work for example 1" do
     # Arrange
     dislikes = [ [],
@@ -99,6 +99,22 @@ describe "edge cases" do
       [3,4],
       [4,5],
       [3,5]]
+
+    # Act
+    answer = possible_bipartition(dislikes)
+
+    # Assert
+    expect(answer).must_equal false
+
+  end
+
+  it "will work for a graph where all nodes don't have dislikes" do
+    # Arrange
+    dislikes = [
+      [1,2],
+      [4,5],
+      [5,6],
+      [4,6]]
 
     # Act
     answer = possible_bipartition(dislikes)
