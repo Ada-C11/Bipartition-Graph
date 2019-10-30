@@ -1,3 +1,5 @@
+require "pry"
+
 # I looked at the leetcode solution in Python 
 # (https://leetcode.com/problems/possible-bipartition/solution/) 
 # to get an idea of how to turn the list of dislikes into a graph, 
@@ -20,8 +22,11 @@ def possible_bipartition(dislikes)
           queue.push(neighbor)
         elsif grouped[neighbor] == grouped[node]
           return false
-        end     
-      end        
+        end  
+      end     
+      if queue.empty? && node < graph.keys.max
+        queue.push(node + 1)
+      end
     end  
     return true
 end
