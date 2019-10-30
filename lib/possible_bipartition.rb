@@ -4,6 +4,7 @@
 # but chose to implement a breadth-first solution instead
 
 def possible_bipartition(dislikes)
+    return true if dislikes.empty?
     graph = build_graph(dislikes)
     # start with an arbitrary node of the graph, 
     # assuming all nodes have at least one edge
