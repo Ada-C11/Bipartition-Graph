@@ -1,3 +1,8 @@
+# I looked at the leetcode solution in Python 
+# (https://leetcode.com/problems/possible-bipartition/solution/) 
+# to get an idea of how to turn the list of dislikes into a graph, 
+# but chose to implement a breadth-first solution instead
+
 def possible_bipartition(dislikes)
     graph = build_graph(dislikes)
     # start with an arbitrary node of the graph, 
@@ -23,7 +28,7 @@ end
 
 
 def build_graph(dislikes)
-  nodes = Hash.new {|h,k| h[k] = [] }
+  nodes = Hash.new {|h,k| h[k] = [] } #had to look up how to do this on StackOverflow
     dislikes.each do |dislike|
         dislike.each do |node|
           nodes[node] += dislike - [node] 

@@ -2,7 +2,6 @@ require_relative "test_helper"
 
 describe "possible_bipartition" do
   it "will work for example 1" do
-    
     # Arrange
     dislikes = [ [],
       [2, 3],
@@ -18,8 +17,7 @@ describe "possible_bipartition" do
     expect(answer).must_equal true
   end
 
-  it "will work for example 2" do
-    
+  it "will work for example 2" do 
     # Arrange
     dislikes =  [ [],
       [2, 3],
@@ -51,8 +49,7 @@ describe "possible_bipartition" do
     expect(answer).must_equal false
   end
 
-  it "will return true for a graph which can be bipartitioned" do
-    
+  it "will return true for a graph which can be bipartitioned" do 
     # Arrange
     dislikes = [ [3, 6],
       [2, 5],
@@ -72,7 +69,6 @@ describe "possible_bipartition" do
 
 
   it "will return false for a graph which cannot be bipartitioned"  do
-    
     # Arrange
     dislikes = [ [3, 6],
       [2, 5],
@@ -91,7 +87,6 @@ describe "possible_bipartition" do
   end
 
   it "will work for an empty graph" do
-    
     expect(possible_bipartition([])).must_equal true
   end
 end
