@@ -23,8 +23,13 @@ def possible_bipartition(dislikes)
           return false
         end  
       end     
-      if queue.empty? && node < graph.keys.max
-        queue.push(node + 1)
+      if queue.empty?
+         graph.keys.each do |key|
+            if grouped[key].nil?
+                queue.push(key)
+                break
+            end
+        end
       end
     end  
     return true
@@ -33,11 +38,11 @@ end
 
 def build_graph(dislikes)
   nodes = Hash.new {|h,k| h[k] = [] } #had to look up how to do this on StackOverflow
-    dislikes.each do |dislike|
-        dislike.each do |node|
-          nodes[node] += dislike - [node] 
-        end
-    end
-    return nodes
+  dislikes.each do |dislike|
+      dislike.each do |node|
+        nodes[node] += dislike - [node] 
+      end
+  end
+  return nodes
 end
 
